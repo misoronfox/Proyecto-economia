@@ -5,3 +5,4 @@ export interface Transaccion{
     fecha:string;
     idCategoria:number;
 }
+

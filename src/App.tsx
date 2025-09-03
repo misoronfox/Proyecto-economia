@@ -1,5 +1,6 @@
-import React from "react";
 import './App.css'
+import TransaccionForm from './components/TransaccionForm';
+import TransaccionList from "./components/TransaccionList";
 
 function App() {
   return (
@@ -16,28 +17,12 @@ function App() {
           <p className="text-gray-700">
             Aquí podrás ver tus ingresos, gastos y ahorro mensual.
           </p>
+          <TransaccionList refresh={true}></TransaccionList>
         </section>
 
         <section className="bg-white rounded-lg shadow-md p-6">
           <h2 className="text-xl font-semibold mb-2">Agregar Nuevo Gasto</h2>
-          <form className="flex flex-col gap-3">
-            <input
-              type="text"
-              placeholder="Nombre del gasto"
-              className="border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
-            <input
-              type="number"
-              placeholder="Monto"
-              className="border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
-            <button
-              type="submit"
-              className="bg-blue-500 text-white font-semibold py-2 rounded hover:bg-blue-600 transition"
-            >
-              Agregar
-            </button>
-          </form>
+          <TransaccionForm onNuevaTransaccion={() => console.log("Nueva transacción")} ></TransaccionForm>
         </section>
       </main>
 

@@ -1,6 +1,5 @@
-import { json } from "stream/consumers";
-import { Transaccion } from "./types";
-import { promises } from "dns";
+import type { Transaccion } from "./types";
+
 
 const API_URL = "http://localhost:5000"
 
