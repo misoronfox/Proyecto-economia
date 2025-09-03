@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Transaccion } from "../types";
+import type { Transaccion } from "../types";
 import { eliminarTransaccion, obtenerTransacciones } from "../api";
 import ModificarTransaccionModal from "../modificarTransaccionModal";
 
