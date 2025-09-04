@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { crearTransaccion } from "../api";
+import { crearTransaccion } from "../api/transaccionApi";
 
 
 export default function TransaccionForm({ onNuevaTransaccion }: { onNuevaTransaccion: () => void }) {
