@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Modal from "react-modal"
-import type { Transaccion } from "./types";
+import type { Transaccion } from "../types/transaccion";
 
 interface Props {
   transaccion: Transaccion;

@@ -1,7 +1,7 @@
-import type { Transaccion } from "./types";
+import type { Transaccion } from "../types/transaccion";
+import { API_URL } from "../../../config/apiConfig";
 
 
-const API_URL = "http://localhost:5000"
 
 export async function obtenerTransacciones(): Promise<Transaccion[]>{
     const res = await fetch(`${API_URL}/transaccion`);
@@ -33,12 +33,3 @@ export async function eliminarTransaccion(id:number) {
   });
 
 }
-
-/* export async function crearTransaccion(data: any) {
-  return fetch(`${API_URL}/transaccion`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  }).then(res => res.json());
-}
- */
