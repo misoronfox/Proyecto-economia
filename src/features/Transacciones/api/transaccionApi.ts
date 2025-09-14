@@ -18,7 +18,7 @@ export async function crearTransaccion(data: any): Promise<Transaccion> {
   return res.json();
 }
 
-export async function modificarTransaccion(data:any, id:number):Promise<Transaccion>{
+export async function modificarTransaccion(id:number, data:any):Promise<Transaccion>{
   const res = await fetch(`${API_URL}/transaccion/${id}`,{
     method:"PATCH",
     headers: { "Content-Type": "application/json" },
