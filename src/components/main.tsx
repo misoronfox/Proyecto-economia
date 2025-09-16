@@ -1,6 +1,7 @@
 import { useState } from "react"
 import TransaccionForm from "../features/Transacciones/components/TransaccionForm"
 import TransaccionList from "../features/Transacciones/components/TransaccionList"
+import GraficoGastos from "../features/Transacciones/components/graphs";
 export default function Main(){
 
     const[refresh, setRefresh] = useState(false);
@@ -21,6 +22,11 @@ export default function Main(){
             <section className="bg-white rounded-lg shadow-md p-6">
                 <h2 className="text-xl font-semibold mb-2">Agregar Nuevo Gasto</h2>
                 <TransaccionForm onNuevaTransaccion={triggerRefresh} ></TransaccionForm>
+            </section>
+
+            <section className="bg-white rounded-lg shadow-md p-6">
+                <h2 className="text-xl font-semibold mb-2">Grafico de gastos</h2>
+                <GraficoGastos></GraficoGastos>
             </section>
       </main>
     )
